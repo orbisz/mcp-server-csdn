@@ -1,0 +1,34 @@
+csdn:
+  api:
+    categories: Java场景面试宝典
+    cookie: uuid_tt_dd=10_19089772240-1754356238351-526297; dc_session_id=10_1754356238351.974714; dc_sid=a4a90f92709cb5c675355f26a247d2f6; fid=20_73638620039-1754356249876-920582; c_first_ref=default; c_first_page=https%3A//editor.csdn.net/md/; c_segment=9; SESSION=2c56a988-a703-4271-be2f-a488736431ce; creative_btn_mp=1; Hm_lvt_6bcd52f51e9b3dce32bec4a3997715ac=1754356251; HMACCOUNT=020E7E8E87A6ABA8; hide_login=1; UserName=hywzxy; UserInfo=8e197f1e8e3d4a1a888e47381ed8fc10; UserToken=8e197f1e8e3d4a1a888e47381ed8fc10; UserNick=-%E8%96%9B%E5%AE%9A%E8%B0%94%E7%9A%84%E7%8C%AB-; AU=00A; UN=hywzxy; BT=1754356267605; p_uid=U010000; csdn_newcert_hywzxy=1; c_dsid=11_1754356532033.009368; creativeSetApiNew=%7B%22toolbarImg%22%3A%22https%3A//img-home.csdnimg.cn/images/20231011044944.png%22%2C%22publishSuccessImg%22%3A%22https%3A//img-home.csdnimg.cn/images/20240229024608.png%22%2C%22articleNum%22%3A0%2C%22type%22%3A0%2C%22oldUser%22%3Afalse%2C%22useSeven%22%3Atrue%2C%22oldFullVersion%22%3Afalse%2C%22userName%22%3A%22hywzxy%22%7D; Hm_lpvt_6bcd52f51e9b3dce32bec4a3997715ac=1754360322; c_pref=https%3A//mp.csdn.net/; c_ref=https%3A//editor.csdn.net/; c_page_id=default; dc_tos=t0i136; log_Id_pv=27; log_Id_view=529; log_Id_click=30
+
+spring:
+  application:
+    name: mcp-server-csdn
+
+  ai:
+    mcp:
+      server:
+        name: ${spring.application.name}
+        version: 1.0.0
+
+  main:
+    banner-mode: off
+# stdio 模式打开，sse 模式，注释掉。
+#    web-application-type: none
+
+logging:
+# stdio 模式打开，sse 模式，注释掉。
+#  pattern:
+#    console:
+  file:
+    name: data/log/${spring.application.name}.log
+
+server:
+  port: 8101
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
